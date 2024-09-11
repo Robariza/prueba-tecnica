@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Lista de Empleados</h1>
+    <button routerLink="/empleado" class="btn btn-primary">Agregar Nuevo Empleado</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nombre</th>
+          <th>Apellido 1</th>
+          <th>Apellido 2</th>
+          <th>Código Departamento</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{ empleado.codigo }}</td>
+          <td>{{ empleado.nombre }}</td>
+          <td>{{ empleado.apellido1 }}</td>
+          <td>{{ empleado.apellido2 }}</td>
+          <td>{{ empleado.codigo_departamento }}</td>
+          <td>
+            <button routerLink='/empleado, empleado._id' class="btn btn-warning">Editar</button>
+            <button (click)="deleteEmpleado(empleado._id)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

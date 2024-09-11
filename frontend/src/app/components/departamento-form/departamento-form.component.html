@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>{{ departamento._id ? 'Editar Departamento' : 'Agregar Nuevo Departamento' }}</h1>
+    <form (ngSubmit)="saveDepartamento()">
+      <div class="form-group">
+        <label for="codigo">Código:</label>
+        <input type="number" id="codigo" [(ngModel)]="departamento.codigo" name="codigo" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="departamento.nombre" name="nombre" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>
+  
