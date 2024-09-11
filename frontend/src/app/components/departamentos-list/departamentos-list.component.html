@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Lista de Departamentos</h1>
-    <button routerLink="/departamento" class="btn btn-primary">Agregar Nuevo Departamento</button>
+    <button routerLink="/departamento" class="btn btn-primary m-4">Agregar Nuevo Departamento</button>
     <table class="table">
       <thead>
         <tr>
@@ -14,7 +14,7 @@
           <td>{{ departamento.codigo }}</td>
           <td>{{ departamento.nombre }}</td>
           <td>
-            <button routerLink='/departamento, departamento._id' class="btn btn-warning">Editar</button>
+            <button routerLink='/departamento' class="btn btn-warning m-2">Editar</button>
             <button (click)="deleteDepartamento(departamento._id)" class="btn btn-danger">Eliminar</button>
           </td>
         </tr>
